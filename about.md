@@ -1,15 +1,28 @@
 ---
 layout: page
-title: About
+title: Be a General!
 permalink: /about/
 ---
 
-Some information about you!
 
-### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+### Education
+
+2013.03~2016.02: 선린인터넷고등학교 졸업  
+2017.03~: 인천대학교 컴퓨터공학부 재학
+
+### SKILLS
+
+*Programming Language*  
+* Middle Level: C++, Python  
+* Beginner Level: Java, JavaScript  
+
+*Library and API*  
+* AI: Tensorflow
+* Python: Pandas, Numpy
+* GameProgramming: DirectX, Unreal 4
+
 
 ### Contact me
 
-[gkdnfka@gmail.com](mailto:gkdnfka@gmail.com)
+In E-Mail: [gkdnfka@gmail.com](mailto:gkdnfka@gmail.com)
