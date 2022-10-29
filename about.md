@@ -18,10 +18,13 @@ permalink: /about/
 * Beginner Level: Java, JavaScript  
 
 *Library and API*  
-* AI: Tensorflow
+* AI: Tensorflow, Pytorch
+* DBMS: MySQL
 * Python: Pandas, Numpy
 * GameProgramming: DirectX, Unreal 4
 
+### Awards
+2022.05: 2022년도 인천대학교 컴퓨터공학부 졸업작품발표회 장려상 수상(작품명: Travel Together(T.T))
 
 ### Contact me
 
