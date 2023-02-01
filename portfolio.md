@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Portfolio
-permalink: /potfolio/
+permalink: /portfolio/
 ---
 
 # Careers
