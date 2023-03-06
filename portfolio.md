@@ -4,9 +4,7 @@ title: Portfolio
 permalink: /portfolio/
 ---
 
-# Careers
-
-2022.09 ~ 2022.12: 코코넛 사일로(주) 인턴
+## 2022.09 ~ 2022.12: 코코넛 사일로(주) 인턴
 
 - Image Classification 관련 업무 수행:
     * insightface package를 통해 이미지 feature 추출 후 Cosine Distance를 활용한 닮은꼴 연예인 추천
