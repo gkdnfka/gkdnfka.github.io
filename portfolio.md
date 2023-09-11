@@ -50,7 +50,7 @@ permalink: /portfolio/
         + Bert
         + MRC(Machine Reading comprehension)
 
-## 인천대학교 졸업작품 발표회 장려상 수상작
+## 인천대학교 졸업작품발표회 장려상 수상
 
 ### 2021.09 ~ 2022.05: T.T(Travel Together) 어플리케이션
 
