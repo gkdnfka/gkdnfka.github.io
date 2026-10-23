@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #1a252f;
+    --secondary-color: #2c3e50;
+    --text-color: #222222;
+    --light-text: #555555;
+    --bg-color: #f8f9fa;
+    --border-color: #e9ecef;
+    --highlight-color: #d35400;
+    --tag-bg: #ecf0f1;
+    --tag-text: #2c3e50;
+    --page-width: 210mm;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.55;
+    font-size: 14px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.resume-wrapper {
+    width: 100%;
+    max-width: var(--page-width);
+    margin: 2rem auto;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.page-container {
+    padding: 15mm 20mm;
+    /* A4 padding */
+    width: 100%;
+}
+
+/* Header */
+.resume-header {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 2px solid var(--primary-color);
+    text-align: left;
+}
+
+/* 사진 우측 배치를 원할 경우 사용 */
+.resume-header.photo-right {
+    flex-direction: row-reverse;
+}
+
+/* 프로필 사진 컨테이너 (기본 3:4 규격 비율) */
+.header-photo {
+    width: 95px;
+    height: 125px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    background-color: #f1f3f5;
+}
+
+/* 원형 사진을 원할 경우 사용 */
+.header-photo.circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+}
+
+.header-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.header-content {
+    flex: 1;
+}
+
+.resume-header h1 {
+    font-size: 2.15rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+    letter-spacing: 2px;
+}
+
+.resume-header h2 {
+    font-size: 1.08rem;
+    font-weight: 500;
+    color: var(--light-text);
+    margin-bottom: 0.85rem;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.2rem;
+    font-size: 0.92rem;
+    color: var(--light-text);
+}
+
+/* Sections */
+.section {
+    margin-bottom: 1.6rem;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+/* Summary / About Me */
+.summary-box {
+    background-color: var(--bg-color);
+    border-left: 4px solid var(--primary-color);
+    padding: 0.85rem 1.1rem;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 0;
+}
+
+.summary-text {
+    font-size: 0.94rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    text-align: justify;
+    word-break: keep-all;
+    margin: 0;
+}
+
+.summary-text b {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Bullet Profile Lists (New feedback!) */
+.profile-list {
+    list-style: none;
+}
+
+.profile-list li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.45rem;
+    text-align: justify;
+    word-break: keep-all;
+    font-size: 0.93rem;
+    line-height: 1.52;
+}
+
+.profile-list li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.profile-list b {
+    color: var(--primary-color);
+}
+
+/* Flat Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+}
+
+.skill-category h4 {
+    color: var(--secondary-color);
+    margin-bottom: 0.45rem;
+    font-size: 0.94rem;
+}
+
+.flat-list {
+    list-style: none;
+}
+
+.flat-list li {
+    margin-bottom: 0.32rem;
+    font-size: 0.83rem;
+    background: #f1f3f5;
+    padding: 0.26rem 0.45rem;
+    border-radius: 4px;
+    display: inline-block;
+    width: 100%;
+    word-break: keep-all;
+}
+
+/* Career Summary */
+.career-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+}
+
+.career-row .company {
+    font-weight: 700;
+    flex: 1;
+}
+
+.career-row .role {
+    flex: 1;
+    color: var(--secondary-color);
+}
+
+.career-row .period {
+    color: var(--light-text);
+    font-size: 0.95rem;
+}
+
+/* Detailed Projects */
+.experience-item.expanded-project {
+    margin-bottom: 2.5rem;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.5rem;
+    background-color: var(--bg-color);
+    padding: 0.8rem 1rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.exp-header .company-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.exp-header .job-title {
+    font-size: 1rem;
+    color: var(--light-text);
+}
+
+.project-block {
+    margin-bottom: 1.8rem;
+    padding-left: 0.3rem;
+}
+
+.pro-title {
+    font-size: 1.05rem;
+    color: var(--primary-color);
+    margin-bottom: 0.45rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.pro-title::before {
+    content: "▪";
+    color: var(--primary-color);
+    font-size: 0.85rem;
+}
+
+.star-format {
+    list-style: none;
+}
+
+.star-format>li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.6rem;
+    word-break: keep-all;
+}
+
+.star-format>li::before {
+    content: "-";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.star-format b {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.star-format ul {
+    list-style-type: circle;
+    margin-left: 1.5rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.star-format ul li {
+    margin-bottom: 0.3rem;
+    color: var(--text-color);
+}
+
+.highlight {
+    color: var(--highlight-color);
+    font-weight: 600;
+}
+
+/* Education row */
+.edu-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+}
+
+.edu-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.edu-title {
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.edu-desc {
+    color: var(--light-text);
+    font-size: 0.95rem;
+    margin-top: 0.2rem;
+}
+
+.edu-period {
+    color: var(--light-text);
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+/* Page Break (Screen view) */
+.page-break {
+    margin: 3rem 0;
+    border-top: 1px dashed var(--border-color);
+    position: relative;
+    clear: both;
+}
+
+.page-break::after {
+    content: "── A4 인쇄 페이지 분할선 ──";
+    position: absolute;
+    top: -0.65rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 0 1rem;
+    font-size: 0.8rem;
+    color: var(--light-text);
+}
+
+/* Print Logic */
+@page {
+    size: A4 portrait;
+    margin: 12mm 15mm 10mm 15mm;
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        font-size: 13.5px;
+    }
+
+    .resume-wrapper {
+        box-shadow: none;
+        margin: 0;
+        width: 100%;
+        max-width: none;
+    }
+
+    .page-container {
+        padding: 0;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    /* 1페이지 여백 및 섹션 간격 최적화 */
+    #page-1 .section {
+        margin-bottom: 1.15rem;
+    }
+
+    #page-1 .section:last-child {
+        margin-bottom: 0;
+    }
+
+    /* 2페이지 (헤카톤에이아이) 여백 최적화: 4개 프로젝트가 2페이지 내에서 완결되어 3페이지로 넘치지 않도록 방지 */
+    #page-2 .section {
+        margin-bottom: 0;
+    }
+
+    #page-2 .exp-header {
+        margin-bottom: 0.9rem;
+        padding: 0.6rem 0.9rem;
+    }
+
+    #page-2 .experience-item {
+        margin-bottom: 0;
+    }
+
+    #page-2 .project-block {
+        margin-bottom: 1.1rem;
+    }
+
+    #page-2 .project-block:last-child {
+        margin-bottom: 0;
+    }
+
+    #page-2 .star-format>li {
+        margin-bottom: 0.35rem;
+    }
+
+    #page-2 .star-format ul {
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+    }
+
+    #page-2 .star-format ul li {
+        margin-bottom: 0.2rem;
+    }
+
+    .page-break {
+        border-top: none;
+        margin: 0;
+        padding: 0;
+        height: 0;
+        page-break-before: always;
+        break-before: page;
+        display: block;
+    }
+
+    .page-break::after {
+        display: none;
+    }
+
+    /* 인쇄 시 페이지 분할 직후 시작하는 항목의 상단 여백 확보 */
+    .experience-item.page-start,
+    .page-break + .experience-item {
+        margin-top: 1.2rem !important;
+        padding-top: 0.4rem !important;
+    }
+
+    .section-title {
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    /* 개별 블록 단위로 페이지 넘김 방지 (컨테이너인 .section, .experience-item은 분할 허용) */
+    .skills-grid,
+    .skill-category,
+    .career-summary,
+    .project-block,
+    .summary-box,
+    .edu-row {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .summary-box {
+        background-color: #f8f9fa !important;
+        border-left: 4px solid #1a252f !important;
+    }
+
+    .header-photo {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+    }
+
+    .flat-list li {
+        background-color: #f1f3f5 !important;
+    }
+
+    .exp-header {
+        background-color: #f8f9fa !important;
+        border-left: 4px solid #1a252f !important;
+    }
+}
